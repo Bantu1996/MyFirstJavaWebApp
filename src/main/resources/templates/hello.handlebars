@@ -12,9 +12,23 @@
 
 <form action="/hello" method="post" >
     <input type="text" name="username">
+    <div class="control">
+        <input type="radio" name="radioBtn" checked class="radioBtn" value="English">
+        <span class="label-body">English</span>
+        <input type="radio" name="radioBtn" class="radioBtn" value="Afrikaans">
+        <span class="label-body">Afrikaans</span>
+        <input type="radio" name="radioBtn" class="radioBtn" value="IsiXhosa">
+        <span class="label-body">IsiXhosa</span>
+    </div>
     <input type="submit" >
 </form>
-
+<div>
+    <ul>
+        {{#each users}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
 {{greeting}}
 
 </body>
